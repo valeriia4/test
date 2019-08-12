@@ -39,11 +39,32 @@
 		slidesToScroll: 1,
 		arrows: true,
 		centerMode: false,
+		speed: 1000,
 		nextArrow: '<button class="next"></button>',
-		prevArrow: '<button class="prev"></button>'
+		prevArrow: '<button class="prev"></button>',
+		responsive: [
+		{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 0.5,
+				slidesToScroll: 0.5,
+				infinite: true,
+			}
+		},
+		{
+			breakpoint: 724,
+			settings: {
+				slidesToShow: 0.25,
+				slidesToScroll: 0.25,
+				infinite: true,
+			}
+		}
+		]
 	});
 
 })(jQuery);
+
+
 
 var map;
 function initMap() {
@@ -183,32 +204,40 @@ const googleMapsScript = document.createElement('script');
 googleMapsScript.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC-cDL1H-TK5ESfz1Z_kgUTq07k83I4_28&callback=initMap';
 document.head.appendChild(googleMapsScript);
 
-
 //tabs
-var tabLinks = document.querySelectorAll(".tabs a");
-var tabPanels = document.querySelectorAll(".tabs-panel");
+;(function($) {
+	$(function() {
+		"use strict";
+		jQuery('a').on('click', function (e) {
+			e.preventDefault(); 
+		});
+		$("ul.tabs__caption").on("click", "li:not(.active)", function() {
+			$(this)
+			.addClass("active")
+			.siblings()
+			.removeClass("active")
+			.closest("div.tabs")
+			.find("div.tabs__content")
+			.removeClass("active")
+			.eq($(this).index())
+			.addClass("active");
+		});
+	});
+})(jQuery);
 
-for (let i = 0; i <tabLinks.length;  i++) {
-	let el = tabLinks[i];
-	el.addEventListener("click", function(e){
-		e.preventDefault();
 
-		let parentSLide = el.closest('.tabs')
-		parentSLide.querySelector("li.active").classList.remove('active');
-
-
-		let parentTabs = el.closest('.tabs-container')
-		parentTabs.querySelector(".tabs-panel.active").classList.remove('active');
-
-		var parentListItemIndex = el.parentElement.getAttribute('data-tab'),
-		panelContentIndex = '[data-tab-index="' + parentListItemIndex
-		+ '"]';
-		el.parentElement.classList.add("active");
-
-		for (let j = 0; j < tabPanels.length; j++) {
-			if (tabPanels[j].matches(panelContentIndex)) {
-				tabPanels[j].classList.add("active");
-			}
-
-		}	});
+//animate
+var img = document.querySelector("#filter feTurbulence");
+var frames = 0;
+var rad = Math.PI / 360;
+function AnimateBaseFrequency() {
+	bfx = .16;
+	bfy = .1;
+	frames += 1;
+	bfx += 0.01 * Math.cos(frames * rad);
+	bfy -= 0.01 * Math.sin(frames * rad);
+	bf = bfx.toString() + ' ' + bfy.toString();
+	img.setAttributeNS(null, 'baseFrequency', bf);
+	window.requestAnimationFrame(AnimateBaseFrequency);
 }
+window.requestAnimationFrame(AnimateBaseFrequency);

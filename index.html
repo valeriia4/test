@@ -16,215 +16,237 @@
 </head>
 <body>
 
-    <header class="ba-header">
+    <header class="ba-header" style="background-image: none; position: relative;">
 
-        <div class="container ba-header__container">
-            <a href="#" class="ba-logo">Surfers Co.</a>
+       <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute;"  version="1.1" class="svg-filters" width="275" height="183" viewBox="0 0 220 220">
+        <defs>
+          <filter id="filter">
+            <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="2" result="turbulence" />
+            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="10" in="SourceGraphic" in2="turbulence" />
+        </filter>
+    </defs>
+</svg>
+<div id="imgWrapper">
+    <img class="test" src="img/bg.png"/>
+</div>
 
-            <nav>
-                <ul class="menu">
-                    <li class="menu__item ">
-                        <a href="#" class="menu__link">Boards</a>
-                    </li>
-                    <li class="menu__item ">
-                        <a href="#" class="menu__link">About Us</a>
-                    </li>
-                    <li class="menu__item ">
-                        <a href="#" class="menu__link">Our Team</a>
-                    </li>
-                    <li class="menu__item ">
-                        <a href="#" class="menu__link">Posts</a>
-                    </li>
-                    <li class="menu__item ">
-                        <a href="#" class="menu__link">Contact Us</a>
-                    </li>
-                    <li class="menu__item ">
-                        <a href="#" class="menu__link">Dealers</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="social">
-                <ul>
-                    <li class="social__item">
-                       <a href="#" target="_blank">
-                        <svg width="37" height="37">
-                            <use xlink:href="#facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a href="#" target="_blank">
-                        <svg width="37" height="37">
-                            <use xlink:href="#instagram"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a href="#" target="_blank">
-                        <svg width="37" height="37">
-                            <use xlink:href="#mail"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="container ba-header-info">
-        <p class="ba-header-info__title">Ride every wave as if it's you</p>
-        <p class="ba-header-info__subtitle">We love the motion of the ocean</p>
-        <div class="slider-main">
-            <div class="slider-main-content">
-                <div class="boards">
-                    <div class="boards-wrapper">
-                        <div class="slider-boards">
-                            <img src="img/Boardbig.png" alt="">
-                            <img src="img/board-two.png" alt="">
-                            <img src="img/board-next.png" alt="">
-                            <img src="img/Boardbig.png" alt="">
-                        </div>
-                        <div class="slider-boards-nav">
-                            <img src="img/miniboard.png" alt="">
-                            <img src="img/miniboard2.png" alt="">
-                            <img src="img/mini3.png" alt="">
-                            <img src="img/mini4.png" alt="">
-                        </div>
+<div class="container ba-header__container" style="position: relative;">
+    <a href="#" class="ba-logo">Surfers Co.</a>
+
+    <nav id="main-nav">
+        <label for="menu-input" class="menu-btn" role="button">
+          <span class="menu-btn__line"></span>
+          <span class="menu-btn__line"></span>
+          <span class="menu-btn__line"></span>
+      </label>
+      <input type="checkbox" hidden id="menu-input">
+      
+      <ul class="menu">
+        <li class="menu__item"><a href="#">Boards</a></li>
+        <li class="menu__item"><a href="#">About Us</a></li>
+        <li class="menu__item"><a href="#">Our team</a></li>
+        <li class="menu__item"><a href="#">Posts</a></li>
+        <li class="menu__item"><a href="#">Contact us</a></li>
+        <li class="menu__item"><a href="#">Dealers</a></li>
+    </ul>
+    
+</nav>
+
+
+<div class="social">
+    <ul>
+        <li class="social__item">
+           <a href="#" target="_blank">
+            <svg width="37" height="37">
+                <use xlink:href="#facebook"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="social__item">
+        <a href="#" target="_blank">
+            <svg width="37" height="37">
+                <use xlink:href="#instagram"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="social__item">
+        <a href="#" target="_blank">
+            <svg width="37" height="37">
+                <use xlink:href="#mail"></use>
+            </svg>
+        </a>
+    </li>
+</ul>
+</div>
+</div>
+<div class="container ba-header-info">
+    <p class="ba-header-info__title">Ride every wave as if it's you</p>
+    <p class="ba-header-info__subtitle">We love the motion of the ocean</p>
+    <div class="slider-main">
+        <div class="slider-main-content">
+            <div class="boards">
+                <div class="boards-wrapper">
+                    <div class="slider-boards">
+                        <img src="img/Boardbig.png" alt="">
+                        <img src="img/board-two.png" alt="">
+                        <img src="img/board-next.png" alt="">
+                        <img src="img/Boardbig.png" alt="">
                     </div>
-                    <div class="boards-info">
-                        <p class="boards-info__model">JR Surfboards The Donny Stoker Yellow/Green Rail Fade</p>
-                        <div class="boards-info-rating">
-                            <img src="img/star.png" alt="">
-                            <img src="img/star.png" alt="">
-                            <img src="img/star.png" alt="">
-                            <img src="img/star.png" alt="">
-                            <img src="img/Star 5.png" alt="">
-                            <span class="boards-info-rating__value">(52)</span>
-                        </div>
-                        <div class="tabs-container">
-                            <ul class="tabs">
-                                <li class="active" data-tab="0">
-                                    <a href="">Description</a>
-                                </li>
-                                <li data-tab="1">
-                                    <a href="">Features</a>
-                                </li>
-                                <li data-tab="2">
-                                    <a href="">Dimensions</a>
-                                </li>
-                            </ul>
-                            <div class="tabs-content">
-                                <div class="tabs-panel active" data-tab-index="0">
-                                    <p class="tabs-content__info">Easy to ride, care free surfing craft that's fun for everyone, paddles well, super fast down the line and great for any level of surfing depending on who rides it. The Donny Stoker, a rework on design from stokesys first ever pro model. A super easy to surf and fun board. The Donny Stoker is a board for total freesurfing expression.</p>
-                                    <div class="tabs-content-buy">
-                                        <p class="tabs-content-buy__price">$499.99</p>
-                                        <button class="tabs-content-buy__btn">Buy now</button>
-                                    </div>
-                                    <a href="#" class="tabs-content__link">View all boards</a>
-                                </div>
-                                <div class="tabs-panel" data-tab-index="1">
-                                    <p class="tabs-content__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est odit exercitationem, nostrum veritatis animi nobis porro iusto dolore eveniet beatae corrupti, temporibus, officia debitis quas odio. Asperiores maxime, nulla! Vero?</p>
-                                    <p class="tabs-content__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est odit exercitationem, nostrum veritatis animi nobis porro iusto dolore eveniet beatae corrupti, temporibus, officia debitis quas odio. Asperiores maxime, nulla! Vero?</p>
-                                </div>
-                                <div class="tabs-panel" data-tab-index="2">
-                                    <p class="tabs-content__info">Longboards</p>
-                                    <ul>
-                                        <li>Classic longboards</li>
-                                        <li>Modern longboards</li>
-                                        <li>The 2 + 1</li>
-                                        <li>The Malibu</li>
-                                        <li>Olo</li>
-                                        <li>Alaia</li>
-                                        <li>Tandem</li>
-                                    </ul>
-                                    <p class="tabs-content__info">Shortboards</p>
-                                    <ul>
-                                        <li>Hybrid</li>
-                                        <li>Fish</li>
-                                        <li>Funboard</li>
-                                        <li>Gun</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="slider-boards-nav">
+                        <img src="img/miniboard.png" alt="">
+                        <img src="img/miniboard2.png" alt="">
+                        <img src="img/mini3.png" alt="">
+                        <img src="img/mini4.png" alt="">
                     </div>
                 </div>
-            </div>
-            <div class="slider-main-content">
-                <div class="boards">
-                    <div class="boards-wrapper">
-                        <div class="slider-boards">
-                            <img src="img/Boardbig.png" alt="">
-                            <img src="img/board-next.png" alt="">
-                            <img src="img/Boardbig.png" alt="">
-                            <img src="img/board-two.png" alt="">
-                        </div>
-                        <div class="slider-boards-nav">
-                            <img src="img/mini3.png" alt="">
-                            <img src="img/mini4.png" alt="">
-                            <img src="img/miniboard.png" alt="">
-                            <img src="img/miniboard2.png" alt="">
-                        </div>
+                <div class="boards-info">
+                    <p class="boards-info__model">JR Surfboards The Donny Stoker Yellow/Green Rail Fade</p>
+                    <div class="boards-info-rating">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/Star 5.png" alt="">
+                        <span class="boards-info-rating__value">(52)</span>
                     </div>
-                    <div class="boards-info">
-                        <p class="boards-info__model">JR Surfboards The Donny Stoker Yellow/Green Rail Fade</p>
-                        <div class="boards-info-rating">
-                            <img src="img/star.png" alt="">
-                            <img src="img/star.png" alt="">
-                            <img src="img/star.png" alt="">
-                            <img src="img/star.png" alt="">
-                            <img src="img/Star 5.png" alt="">
-                            <span class="boards-info-rating__value">(52)</span>
+                    <div class="container">
+
+                        <div class="tabs">
+
+                          <ul class="tabs__caption">
+                            <li class="active">
+                                <a href="#">Description</a>
+                            </li>
+                            <li>
+                                <a href="#">Features</a>
+                            </li>
+                            <li>
+                                <a href="#">Dimensions</a>
+                            </li>
+                        </ul>
+
+                        <div class="tabs__content  active">
+                            <p class="content__info">Easy to ride, care free surfing craft that's fun for everyone, paddles well, super fast down the line and great for any level of surfing depending on who rides it. The Donny Stoker, a rework on design from stokesys first ever pro model. A super easy to surf and fun board. The Donny Stoker is a board for total freesurfing expression.</p>
+                            <div class="content-buy">
+                                <p class="content-buy__price">$499.99</p>
+                                <button class="content-buy__btn">Buy now</button>
+                            </div>
+                            <a href="#" class="content__link">View all boards</a>
                         </div>
-                        <div class="tabs-container">
-                            <ul class="tabs">
-                                <li class="active" data-tab="0">
-                                    <a href="">Description</a>
-                                </li>
-                                <li data-tab="1">
-                                    <a href="">Features</a>
-                                </li>
-                                <li data-tab="2">
-                                    <a href="">Dimensions</a>
-                                </li>
+
+                        <div class="tabs__content">
+                            <p class="content__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est odit exercitationem, nostrum veritatis animi nobis porro iusto dolore eveniet beatae corrupti, temporibus, officia debitis quas odio. Asperiores maxime, nulla! Vero?</p>
+                            <p class="content__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est odit exercitationem, nostrum veritatis animi nobis porro iusto dolore eveniet beatae corrupti, temporibus, officia debitis quas odio. Asperiores maxime, nulla! Vero?</p>
+                        </div>
+
+                        <div class="tabs__content">
+                            <p class="content__info">Longboards</p>
+                            <ul>
+                                <li>Classic longboards</li>
+                                <li>Modern longboards</li>
+                                <li>The 2 + 1</li>
+                                <li>The Malibu</li>
+                                <li>Olo</li>
+                                <li>Alaia</li>
+                                <li>Tandem</li>
                             </ul>
-                            <div class="tabs-content">
-                                <div class="tabs-panel active" data-tab-index="0">
-                                    <p class="tabs-content__info">Easy to ride, care free surfing craft that's fun for everyone, paddles well, super fast down the line and great for any level of surfing depending on who rides it. The Donny Stoker, a rework on design from stokesys first ever pro model. A super easy to surf and fun board. The Donny Stoker is a board for total freesurfing expression.</p>
-                                    <div class="tabs-content-buy">
-                                        <p class="tabs-content-buy__price">$499.99</p>
-                                        <button class="tabs-content-buy__btn">Buy now</button>
-                                    </div>
-                                    <a href="#" class="tabs-content__link">View all boards</a>
-                                </div>
-                            </div>
-                            <div class="tabs-panel" data-tab-index="1">
-                                <p class="tabs-content__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est odit exercitationem, nostrum veritatis animi nobis porro iusto dolore eveniet beatae corrupti, temporibus, officia debitis quas odio. Asperiores maxime, nulla! Vero?</p>
-                                <p class="tabs-content__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est odit exercitationem, nostrum veritatis animi nobis porro iusto dolore eveniet beatae corrupti, temporibus, officia debitis quas odio. Asperiores maxime, nulla! Vero?</p>
-                            </div>
-                            <div class="tabs-panel" data-tab-index="2">
-                                <p class="tabs-content__info">Longboards</p>
-                                <ul>
-                                    <li>Classic longboards</li>
-                                    <li>Modern longboards</li>
-                                    <li>The 2 + 1</li>
-                                    <li>The Malibu</li>
-                                    <li>Olo</li>
-                                    <li>Alaia</li>
-                                    <li>Tandem</li>
-                                </ul>
-                                <p class="tabs-content__info">Shortboards</p>
-                                <ul>
-                                    <li>Hybrid</li>
-                                    <li>Fish</li>
-                                    <li>Funboard</li>
-                                    <li>Gun</li>
-                                </ul>
-                            </div>
+                            <p class="content__info">Shortboards</p>
+                            <ul>
+                                <li>Hybrid</li>
+                                <li>Fish</li>
+                                <li>Funboard</li>
+                                <li>Gun</li>
+                            </ul>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="slider-main-content">
+        <div class="boards">
+            <div class="boards-wrapper">
+                <div class="slider-boards">
+                    <img src="img/board-two.png" alt="">
+                    <img src="img/board-next.png" alt="">
+                    <img src="img/Boardbig.png" alt="">
+                    <img src="img/board-next.png" alt="">
+                </div>
+                <div class="slider-boards-nav">
+                    <img src="img/mini3.png" alt="">
+                    <img src="img/mini4.png" alt="">
+                    <img src="img/miniboard.png" alt="">
+                    <img src="img/miniboard2.png" alt="">
+                </div>
+            </div>
+            <div class="boards-info">
+                <p class="boards-info__model">JR Surfboards The Donny Stoker Yellow/Green Rail Fade</p>
+                <div class="boards-info-rating">
+                    <img src="img/star.png" alt="">
+                    <img src="img/star.png" alt="">
+                    <img src="img/star.png" alt="">
+                    <img src="img/star.png" alt="">
+                    <img src="img/Star 5.png" alt="">
+                    <span class="boards-info-rating__value">(52)</span>
+                </div>
+                <div class="tabs-container">
+                    <div class="tabs">
+
+                      <ul class="tabs__caption">
+                        <li class="active">
+                            <a href="#">Description</a>
+                        </li>
+                        <li>
+                            <a href="#">Features</a>
+                        </li>
+                        <li>
+                            <a href="#">Dimensions</a>
+                        </li>
+                    </ul>
+
+                    <div class="tabs__content  active">
+                        <p class="content__info">Easy to ride, care free surfing craft that's fun for everyone, paddles well, super fast down the line and great for any level of surfing depending on who rides it. The Donny Stoker, a rework on design from stokesys first ever pro model. A super easy to surf and fun board. The Donny Stoker is a board for total freesurfing expression.</p>
+                        <div class="content-buy">
+                            <p class="content-buy__price">$499.99</p>
+                            <button class="content-buy__btn">Buy now</button>
+                        </div>
+                        <a href="#" class="content__link">View all boards</a>
+                    </div>
+
+                    <div class="tabs__content">
+                        <p class="content__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est odit exercitationem, nostrum veritatis animi nobis porro iusto dolore eveniet beatae corrupti, temporibus, officia debitis quas odio. Asperiores maxime, nulla! Vero?</p>
+                        <p class="content__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est odit exercitationem, nostrum veritatis animi nobis porro iusto dolore eveniet beatae corrupti, temporibus, officia debitis quas odio. Asperiores maxime, nulla! Vero?</p>
+                    </div>
+
+                    <div class="tabs__content">
+                        <p class="content__info">Longboards</p>
+                        <ul>
+                            <li>Classic longboards</li>
+                            <li>Modern longboards</li>
+                            <li>The 2 + 1</li>
+                            <li>The Malibu</li>
+                            <li>Olo</li>
+                            <li>Alaia</li>
+                            <li>Tandem</li>
+                        </ul>
+                        <p class="content__info">Shortboards</p>
+                        <ul>
+                            <li>Hybrid</li>
+                            <li>Fish</li>
+                            <li>Funboard</li>
+                            <li>Gun</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
 </div>
 
 </header>
@@ -305,7 +327,7 @@
                         </div>
                         <div class="team-slider-item">
                            <div class="team-slider-item__info">
-                            <img src="img/icon4.png" alt="girl" class="team-slider__img">
+                            <img src="img/icon4.png" alt="girl" class="team-slider__img" align="middle">
                             <p class="team-slider__name">Marcy Callaghan</p>
                             <p class="team-slider__email">@marcyjancallaghan</p>
                             <p class="team-slider__geo">San Clemente, CA</p>
@@ -330,15 +352,15 @@
             <div class="updates-posts">
                 <div class="updates-posts-item">
                     <img src="img/updates1.png" alt="girls on beach">
-                    <p class="updates-posts__title">Ellie Turner and Jobe Harris have taken out the 2016 British National Surf Championships</p>
+                    <p class="updates-posts__title"><a href="#">Ellie Turner and Jobe Harris have taken out the 2016 British National Surf Championships</a></p>
                 </div>
                 <div class="updates-posts-item">
                     <img src="img/updates2.png" alt="bluewave">
-                    <p class="updates-posts__title">A large group of surfers invaded the coast of La Jolla Shores, in California, with a single goal in mind</p>
+                    <p class="updates-posts__title"><a href="#">A large group of surfers invaded the coast of La Jolla Shores, in California, with a single goal in mind</a></p>
                 </div>
                 <div class="updates-posts-item">
                     <img src="img/updates3.png" alt="nature of beach">
-                    <p class="updates-posts__title">Surfboards are constantly evolving, and there are multiple board designs for a broad range of environments</p>
+                    <p class="updates-posts__title"><a href="#">Surfboards are constantly evolving, and there are multiple board designs for a broad range of environments</a></p>
                 </div>
             </div>
             <button class="updates__btn">View all posts</button>
